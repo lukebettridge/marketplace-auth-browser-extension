@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="local_warning hide">
+        <p>
+            <strong>Attention!</strong>
+            Check your set environment
+        </p>
+    </div>
+
+    <ul class="filter">
+        <li>
+            <a data-env="develop">DEV</a>
+        </li>
+        <li class="active">
+            <a data-env="integration">INT</a>
+        </li>
+        <li>
+            <a data-env="staging">STG</a>
+        </li>
+    </ul>
+
+    <div data-env="develop" class="hide">
+        <select></select>
+    </div>
+    <div data-env="integration">
+        <select></select>
+    </div>
+    <div data-env="staging" class="hide">
+        <select></select>
+    </div>
+
+    <p class="error hide"></p>
+
+    <button class="reset_token">Reset Token</button>
+    <button class="primary clear_site_data">Clear Site Data</button>
+    <p class="disc">You must be connected to the Experian interactive UK VPN to use this browser extension.</p>
+
+    <script src="../vars.js"></script>
+    <script src="../auth.js"></script>
+    <script src="./extension.js"></script>
+</body>
+
+</html>

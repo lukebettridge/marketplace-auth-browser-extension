@@ -1,0 +1,60 @@
+const _ = {
+    endpoint: (env = "integration") => `http://3-0-0.securetoken.eu-west-1.${env}.uk.experiancs.internal/internal/securetoken/jwt`,
+    environments: [
+        { name: "develop", url: "c2.dev.experiancs.co.uk" }, 
+        { name: "integration", url: "c2.int.experiancs.co.uk" },
+        { name: "staging", url: "c2.stg.experiancs.co.uk" }
+    ],
+    authTokenName: "authId",
+    users: {
+        develop: [],
+        integration: [
+            { id: "e46b683c-86b3-4671-ab83-4d58d06a950f", description: "emily.sunshines@experian.com" },
+            { id: "9327aa8a-6ed7-4e96-9543-89ea72506b32", description: "heatherlaffy1234@outlook.com" },
+            { id: "fba4fa92-516e-4940-81f6-6382fd108736", description: "heather.21@experian.com" },
+            { id: "31dd684e-afcb-45ea-84d1-ab6b6387811e", description: "jbrown18@experian.com" },
+            { id: "bf69e381-9a3a-44bc-bd71-f7a70167e357", description: "johns1@experian.com" },
+            { id: "ec0a6105-9439-4e4d-85c0-10ebac984633", description: "linda.duff@test.com" },
+            { id: "60f8c62f-3fec-45f3-93f8-bb9f563e5210", description: "lynn.bardenc@experian.com" },
+            { id: "cd88fd56-259b-4052-8dfd-169085c01046", description: "mAX20@eLLIOTg.co.uk" },
+            { id: "7e2df4e6-4005-47fb-b987-cf89250046e7", description: "mortgages.nobureau@experian.com" },
+            { id: "e3cd6e04-bac3-4ca9-a63d-9b0577b39528", description: "MRKTM_133@test.com" },
+            { id: "867c8311-51fb-4645-85cb-ccbdbbe4f8a4", description: "NoFinancialProfile@experian.com" },
+            { id: "292c6e4e-08fc-4521-bbe4-20c8e5c93e3f", description: "NoFinancialProfileDisablePrePop@experian.com" },
+            { id: "6534ae09-2f91-4fcb-bac0-b6f2088a2a96", description: "OneAffordabilityField@experian.com" },
+            { id: "6079e262-c6df-4a8f-b892-fd48a5e5515e", description: "royal@blood.com" },
+            { id: "bbf4f87f-8acd-4776-8e8e-3ad89fb27d13", description: "sallya.c2@experian.com" },
+            { id: "9cf517c1-548b-48bf-a508-bc9fc59fcca9", description: "sally.OONE@experian.com" },
+            { id: "d2413b1c-5d29-411e-a193-331b73c342e8", description: "samantha.willmer@experiancs.com" },
+            { id: "bd34ff85-eea1-4408-b263-8eb50579d574", description: "shane.MCELHERAN1@experian.com" },
+            { id: "b0c047e1-0ec8-4654-ac28-b27acac5c7a7", description: "stevec@experian.com" },
+            { id: "823002e3-562c-47e1-abe7-84587f08ca40", description: "susan.fitz1234@outlook.com" },
+            { id: "212a50db-038c-4548-a283-6890bc8f9378", description: "testuser4address@experiancs.com" },
+            { id: "c4e6f894-93ad-4e52-9a5d-d464c40b5157", description: "thomas.rivet@outlook.com" }
+        ],
+        staging: [
+            { id: "a808deb3-e403-4190-b1e2-63145fd3def4", description: "emily.sunshines@experian.com" },
+            { id: "0b4dc6ad-2eb7-47ef-834b-37b3074b88a4", description: "heatherlaffy1234@outlook.com" },
+            { id: "f68ad083-bb89-44f9-af9a-87346d6442ce", description: "heather.21@experian.com" },
+            { id: "4af25e1e-b007-4118-b996-277df92e46fc", description: "jbrown18@experian.com" },
+            { id: "e90d246e-11e3-48e7-a589-076c1274bfbb", description: "johns1@experian.com" },
+            { id: "28c5a0ed-4e77-4700-a3bf-0fe7f7e2f7fc", description: "linda.duff@test.com" },
+            { id: "ed0b97b0-5047-4cf4-bc41-8001f7ad114d", description: "lynn.bardenc@experian.com" },
+            { id: "9b663f01-7d1a-4de2-afdf-289ff588715d", description: "mAX20@eLLIOTg.co.uk" },
+            { id: "4a47f5bc-7197-414f-987e-72f113162ae8", description: "mortgages.nobureau@experian.com" },
+            { id: "c5ff393e-31b2-4227-af39-0af86a27d032", description: "MRKTM_133@test.com" },
+            { id: "41529b26-1024-4b08-a39b-be35181d7c06", description: "NoFinancialProfile@experian.com" },
+            { id: "c1449d18-35ea-4e0b-8724-6fca79480b5b", description: "NoFinancialProfileDisablePrePop@experian.com" },
+            { id: "efd2d00d-499b-4db2-92a4-7047c6e121e0", description: "OneAffordabilityField@experian.com" },
+            { id: "a8dc30c1-b86e-4b5e-a79d-cf0e0b5d8b18", description: "royal@blood.com" },
+            { id: "f1b029de-625a-4916-88ff-ad66728d079a", description: "sallya.c2@experian.com" },
+            { id: "d085ff62-ae54-47c4-87d3-3aaf7c232c5f", description: "sally.OONE@experian.com" },
+            { id: "de7ce31f-517d-4566-aee3-288556010266", description: "samantha.willmer@experiancs.com" },
+            { id: "1010c527-2690-4e9b-9290-595935bf167b", description: "shane.MCELHERAN1@experian.com" },
+            { id: "b78726d1-bdf6-4151-b8ea-35561434b093", description: "stevec@experian.com" },
+            { id: "96104eeb-cac7-4bb2-8422-1582a60be4e2", description: "susan.fitz1234@outlook.com" },
+            { id: "8e241265-b3ff-4ba0-830a-d65acc5dcf02", description: "testuser4address@experiancs.com" },
+            { id: "3ef3dd1b-6d8d-4240-a84f-fa314914252b", description: "thomas.rivet@outlook.com" }
+        ]
+    }
+};
